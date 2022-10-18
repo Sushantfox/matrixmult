@@ -57,12 +57,22 @@ int main()
                 for(k = 0; k < p; k++)
                 {
                     sum = sum + first[c][k]*second[k][d];
-                
-           
+                }
+            pro[c][d] = sum;    // resultant element of pro after multiplication
+            sum = 0;    // to find the next element from scratch
             }
         }
 
-       
+        // printing the elements of the product matrix
+        printf("\n\nThe multiplication of the two entered matrices is: \n\n");
+        for(c = 0; c < m; c++)   // to iterate the rows
+        {
+            for(d = 0; d < q; d++)   // to iterate the columns
+            {
+                printf("%d\t", pro[c][d]);
+            }
+            printf("\n"); // to take the control to the next row
+        }
     }
     printf("\n\n\t\t\tCoding is Fun !\n\n\n");
     return 0;
